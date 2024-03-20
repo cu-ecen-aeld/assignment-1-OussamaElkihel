@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]
+then
+	exit 1
+elif [ ! -d "$1" ]
+then
+	exit 1
+else
+	myvar=$(ls $1 | wc -l)
+	echo the number of files are $myvar
+	
